@@ -1,0 +1,138 @@
+body {
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: rgb(32,21,163);
+  background: linear-gradient(90deg, rgba(32,21,163,1) 9%, rgba(121,9,45,1) 17%, rgba(155,58,107,1) 83%, rgba(32,21,163,1) 92%);
+  color: black;
+}
+
+#todo-app {
+  display: flex;
+  flex-direction: column;
+  width: 90%; /* Increase flexibility for smaller screens */
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 14px 18px 10px rgba(0, 0, 0, 0.482);
+  background: rgba(0, 0, 0, 0.323);
+}
+
+#todo-app h1 {
+  text-align: center;
+  font-size: 1.5rem; /* Responsive text size */
+}
+
+#task-input {
+  width: 94.5%; /* Adjust to container width */
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+
+#add-task-btn {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%; /* Take full width for smaller screens */
+}
+
+#add-task-btn:hover {
+  background-color: #3e8e41;
+}
+
+#todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#todo-list li {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  font-weight: bold;
+  justify-content: space-between; /* Adjust content alignment */
+  align-items: center; /* Align items vertically */
+}
+
+#todo-list li:last-child {
+  border-bottom: none;
+}
+
+#todo-list li button {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 5px 10px;
+  margin-left: 10px; /* Space between button and text */
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  #todo-app {
+    width: 80%; /* More flexible on tablets */
+    padding: 15px;
+  }
+
+  #todo-app h1 {
+    font-size: 1.3rem; /* Adjust heading size */
+  }
+
+  #task-input {
+    font-size: 14px; /* Smaller font for inputs */
+  }
+
+  #add-task-btn {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+
+  #todo-list li {
+    flex-direction: column; /* Stack text and button on smaller screens */
+    align-items: flex-start;
+  }
+
+  #todo-list li button {
+    width: 100%; /* Full width for buttons on smaller screens */
+    margin: 5px 0 0; /* Adjust spacing */
+  }
+}
+
+@media (max-width: 480px) {
+  #todo-app h1 {
+    font-size: 1.2rem; /* Smaller heading for mobile */
+  }
+
+  #task-input {
+    font-size: 12px; /* Adjust font for smaller devices */
+  }
+
+  #add-task-btn {
+    font-size: 12px;
+    padding: 7px 10px;
+  }
+
+  #todo-list li {
+    padding: 8px; /* Smaller padding for compact display */
+  }
+
+  #todo-list li button {
+    font-size: 12px;
+    padding: 5px;
+  }
+}
